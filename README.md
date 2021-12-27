@@ -41,7 +41,7 @@ De applicatie heeft op dit moment al vier pagina's met werkende routing:
 
 Je gaat de volgende concepten implementeren:
 
-* Je implementeert React Context doormiddel van een custom Provider component (`AuthContext.js`);
+* Je implementeert React Context door middel van een custom Provider component (`AuthContextProvider.js`);
 * Je hebt nog geen echte invoervelden nodig voor het inloggen. Het in- en uitlog-proces is niets meer dan een simpele
   state-toggle die wordt beheerd in de context:
 
@@ -67,8 +67,8 @@ const [isAuth, toggleIsAuth] = useState(false);
 
 Als je niet zo goed weet waar je moet beginnen, kun je onderstaand stappenplan volgen:
 
-1. Maak een context-bestand (`AuthContext.js`) met daarin (je raadt het niet!) een `AuthContext`.
-2. Creer dan het custom Provider-component. Uit dit component return je het echte `AuthContext.Provider` component.
+1. Maak een context-bestand (`AuthContextProvider.js`) met daarin (je raadt het niet!) een `AuthContextProvider`.
+2. Creer dan het custom Provider-component. Uit dit component return je het echte `AuthContextProvider.Provider` component.
 3. Zorg ervoor dat we het custom Provider-component zometeen om de applicatie kunnen wikkelen door de children property
    te implementeren.
 4. Maak een data-object aan die je meegeeft aan de `value`-property en zet daar wat test-data in.
